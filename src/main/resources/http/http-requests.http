@@ -1,0 +1,126 @@
+REGION requests
+
+###
+POST http://localhost:8081/regions
+Content-Type: application/json
+
+{
+  "name": "Namangan"
+}
+
+###
+GET http://localhost:8081/regions/1
+
+###
+PUT http://localhost:8081/regions/1
+Content-Type: application/json
+
+{
+  "name" : "Namangan 2"
+}
+
+###
+DELETE http://localhost:8081/regions/1
+
+
+ORGANISATION requests
+
+###
+POST http://localhost:8081/organisations
+Content-Type: application/json
+
+{
+  "name": "EPAM Systems",
+  "regionId": 1,
+  "parentId": 1
+}
+
+###
+GET http://localhost:8081/organisations/1
+
+###
+PUT http://localhost:8081/organisations/1
+Content-Type: application/json
+
+{
+  "name": "EPAM Systems 2",
+  "regionId": 1,
+  "parentId": 1
+}
+
+###
+DELETE http://localhost:8081/organisations/
+
+
+EPLOYEES requests
+
+###
+POST http://localhost:8081/employees
+Content-Type: application/json
+
+{
+  "firstName": "Khurshidbek",
+  "lastName": "Bakhromjonov",
+  "pinfl": "ketmon",
+  "hireDate": "2004-02-23",
+  "organisationId": 1
+}
+
+###
+GET http://localhost:8081/employees/1
+
+###
+PUT http://localhost:8081/employees/1
+Content-Type: application/json
+
+###
+PUT http://localhost:8081/employees/1
+Content-Type: application/json
+
+{
+  "firstName": "Khurshidbek",
+  "lastName": "Bakhromjonov",
+  "pinfl": "bolta",
+  "hireDate": "2004-02-23",
+  "organisationId": 1
+}
+
+###
+DELETE http://localhost:8081/employees/1
+
+CALCULATION requests
+
+###
+POST http://localhost:8081/calculations
+Content-Type: application/json
+
+{
+  "employeeId": 1,
+  "amount": 32.6,
+  "rate": 65.9,
+  "date": "2023-07-07",
+  "organisationId": 1,
+  "calculationType": "AWARD"
+}
+
+###
+GET http://localhost:8081/calculations/1
+
+###
+PUT http://localhost:8081/calculations/1
+Content-Type: application/json
+
+{
+  "employeeId": 1,
+  "amount": 32.6,
+  "rate": 65.9,
+  "date": "2023-07-07",
+  "organisationId": 1,
+  "calculationType": "SALARY"
+}
+
+###
+DELETE http://localhost:8081/calculations/1
+
+Swagger link
+http://localhost:8080/swagger-ui.html
