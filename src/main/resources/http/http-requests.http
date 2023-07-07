@@ -69,9 +69,6 @@ Content-Type: application/json
 ###
 GET http://localhost:8081/employees/1
 
-###
-PUT http://localhost:8081/employees/1
-Content-Type: application/json
 
 ###
 PUT http://localhost:8081/employees/1

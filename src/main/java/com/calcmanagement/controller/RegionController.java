@@ -40,5 +40,4 @@ public class RegionController {
         regionService.deleteRegion(id);
     }
 
-    // Add other endpoints as needed
 }
